@@ -1,3 +1,5 @@
+package tcs.twitchchatsimulator2015;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +32,7 @@ public class Seula {
     }
     
     public void uusiSpammattava() {
-        int a = random.nextInt(spammattavat.size() - 1);
+        int a = random.nextInt(spammattavat.size());
         spammattava = spammattavat.get(a);
     }
     
@@ -38,11 +40,19 @@ public class Seula {
         return this.spammattava;
     }
     
+    public ArrayList<String> getSpammattavat() {
+        return spammattavat;
+    }
+    
+    public void setSpammattavat(ArrayList<String> lista){
+        spammattavat = lista;
+    }
+    
     public boolean onkoSpammattava(String viesti) {
-        if (viesti.equals(spammattava)) {
-            return true;
-        } else {
+        if (viesti == null) {
             return false;
         }
+        
+        return viesti.equals(spammattava);
     }
 }

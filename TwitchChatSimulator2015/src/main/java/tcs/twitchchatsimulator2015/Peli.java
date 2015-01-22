@@ -1,3 +1,5 @@
+package tcs.twitchchatsimulator2015;
+
 
 import java.util.ArrayList;
 
@@ -46,5 +48,9 @@ public class Peli {
     public void lopetaPeli() {
         System.out.println("Stream has gone offline.");
         System.out.println(pelaaja.toString());
+    }
+    
+    public void bannaaPelaaja() {
+        pelaaja.bannaa();
     }
 }

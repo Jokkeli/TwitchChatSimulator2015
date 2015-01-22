@@ -1,3 +1,5 @@
+package tcs.twitchchatsimulator2015;
+
 
 import java.util.Random;
 import java.util.Scanner;
