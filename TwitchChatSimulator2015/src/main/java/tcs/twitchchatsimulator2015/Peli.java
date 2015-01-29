@@ -53,4 +53,8 @@ public class Peli {
     public void bannaaPelaaja() {
         pelaaja.bannaa();
     }
+    
+    public int getPelaajanPisteet(){
+        return pelaaja.getPisteet();
+    }
 }
