@@ -1,0 +1,31 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package Bottilogiikka;
+
+import java.util.Random;
+
+/**
+ *
+ * @author jukkapai
+ */
+public class Nimimerkit {
+    private String[] nimimerkit;
+    private Random random;
+    
+    public Nimimerkit() {
+        this.nimimerkit = new String[]{"doge", "Gaben4president", "fleuri", "Jokkeli",
+                                       "TursuDrillo", "TursuBadDota", "Kapxy", "GabeNewell",
+                                       "CholliP", "mäpä", "n0sc0p3g0d420", "praiseHelix",
+                                       "Julppu", "iorena", "Pallero_", "JButton",
+                                       "KingKongor", "Xx_MurzuMiHD"};
+        this.random = new Random();
+    }
+    
+    public String arvoNimimerkki() {
+        return nimimerkit[random.nextInt(nimimerkit.length - 1)];
+    }
+}

@@ -6,6 +6,8 @@
 
 package Kayttoliittyma;
 
+import Bottilogiikka.Bottilogiikka;
+import Pelilogiikka.Peli;
 import java.awt.*;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -14,7 +16,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
-import tcs.twitchchatsimulator2015.Peli;
 
 /**
  *
@@ -24,6 +25,7 @@ public class Kayttoliittyma implements Runnable{
     
     private JFrame frame;
     private Peli peli;
+    private Bottilogiikka bottilogiikka;
     
     public Kayttoliittyma() {
         
@@ -42,6 +44,9 @@ public class Kayttoliittyma implements Runnable{
         luoKomponentit(frame.getContentPane());
         frame.pack();
         frame.setVisible(true);
+        
+        bottilogiikka.luoBotit();
+        bottilogiikka.kaynnista();
 
     }
     
@@ -69,6 +74,7 @@ public class Kayttoliittyma implements Runnable{
         alapaneeli.add(laheta);
         lahetysruutu.addKeyListener(new NappaimistonKuuntelija(peli, lahetysruutu, viestiruutu, pistekentta));
         
+        this.bottilogiikka = new Bottilogiikka(viestiruutu, peli);
         container.add(alapaneeli, BorderLayout.PAGE_END);
     }
 

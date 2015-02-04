@@ -6,7 +6,7 @@ package tcs.logiikkatestit;
  * and open the template in the editor.
  */
 
-import tcs.twitchchatsimulator2015.Pelaaja;
+import Pelilogiikka.Pelaaja;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

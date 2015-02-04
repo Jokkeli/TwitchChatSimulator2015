@@ -10,7 +10,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import tcs.twitchchatsimulator2015.Peli;
+import Pelilogiikka.Peli;
 
 /**
  *

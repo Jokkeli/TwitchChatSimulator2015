@@ -6,7 +6,9 @@ package tcs.logiikkatestit;
  * and open the template in the editor.
  */
 
-import tcs.twitchchatsimulator2015.Seula;
+
+
+import Pelilogiikka.Viestiseula;
 import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -20,7 +22,7 @@ import org.junit.Test;
  * @author jukkapai
  */
 public class SeulaTesti {
-    Seula seula;
+    Viestiseula seula;
     
     public SeulaTesti() {
     }
@@ -36,7 +38,7 @@ public class SeulaTesti {
     @Before
     public void setUp() {
         
-        seula = new Seula();
+        seula = new Viestiseula();
         seula.luoSpammattavat();
     }
     
@@ -71,7 +73,7 @@ public class SeulaTesti {
     
     @Test
     public void uusiSpammattavaToimii() {
-        Seula seula2 = new Seula();
+        Viestiseula seula2 = new Viestiseula();
         ArrayList<String> testiSpammit = new ArrayList<>();
         testiSpammit.add("doge");
         seula2.setSpammattavat(testiSpammit);
