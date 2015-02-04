@@ -7,3 +7,5 @@
 28.1 3h Käyttöliittymien opiskelua ja käyttöliittymän ohjelmoinnin aloitus
 
 29.1 2h Käyttöliittymän ohjelmointia
+
+4.2 6h timerin ja spammerbotin ohjelmointia

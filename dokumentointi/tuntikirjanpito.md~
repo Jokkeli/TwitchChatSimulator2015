@@ -3,3 +3,7 @@
 21.1 3h Härskiä häkkeröintiä ja vähän UML-kaavioita. Hyvin alkeellinen peli koodattu.
 
 22.1 2h testausta yms
+
+28.1 3h Käyttöliittymien opiskelua ja käyttöliittymän ohjelmoinnin aloitus
+
+29.1 2h Käyttöliittymän ohjelmointia
