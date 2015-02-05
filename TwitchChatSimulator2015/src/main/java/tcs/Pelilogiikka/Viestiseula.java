@@ -1,4 +1,4 @@
-package Pelilogiikka;
+package tcs.Pelilogiikka;
 
 
 import java.util.ArrayList;
@@ -14,6 +14,9 @@ import java.util.Random;
 /**
  *
  * @author jukkapai
+ * 
+ * Luokka, joka sisältää erilaiset spammausvaihtoehdot ja tarkistaa, onko pelaajan
+ * lähettämä viesti validia spammausta.
  */
 public class Viestiseula {
     private ArrayList<String> spammattavat;
@@ -49,6 +52,11 @@ public class Viestiseula {
         spammattavat = lista;
     }
     
+    /**
+     * tarkistaa, onko annettu merkkijono tämänhetkinen spammattava
+     * @param viesti Pelin antama merkkijono
+     * @return totuusarvo, onko viesti spammattava
+     */
     public boolean onkoSpammattava(String viesti) {
         if (viesti == null) {
             return false;

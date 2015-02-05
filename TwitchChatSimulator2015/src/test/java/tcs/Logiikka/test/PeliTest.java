@@ -1,4 +1,4 @@
-package tcs.logiikkatestit;
+package tcs.Logiikka.test;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import Pelilogiikka.Peli;
+import tcs.Pelilogiikka.Peli;
 
 /**
  *
@@ -49,6 +49,27 @@ public class PeliTest {
     @Test
     public void viestiEiBannattu(){
         assertEquals("testipelaaja: doge", peli.viesti("doge"));
+    }
+    
+    @Test
+    public void getPelaajanPisteetToimii(){
+        assertEquals(0, peli.getPelaajanPisteet());
+    }
+    
+    @Test
+    public void getPelaajanVirheetToimii(){
+        assertEquals(0, peli.getPelaajanVirheet());
+    }
+    
+    @Test
+    public void pelaajanBannausToimii() {
+        peli.bannaaPelaaja();
+        assertEquals(true, peli.onkoBannattu());
+    }
+    
+    @Test
+    public void spammattavaToimii() {
+        assertEquals("Kappa", peli.spammattava());
     }
 
     // TODO add test methods here.

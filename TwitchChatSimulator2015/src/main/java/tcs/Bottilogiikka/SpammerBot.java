@@ -4,11 +4,13 @@
  * and open the template in the editor.
  */
 
-package Bottilogiikka;
+package tcs.Bottilogiikka;
 
 /**
  *
  * @author jukkapai
+ * 
+ * Rajapinta, jota kaikki erilaiset spammibotit noudattavat.
  */
 public interface SpammerBot {
     String spammaa(String spammattava);

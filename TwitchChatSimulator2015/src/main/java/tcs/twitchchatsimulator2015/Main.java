@@ -1,7 +1,7 @@
 package tcs.twitchchatsimulator2015;
 
 
-import Kayttoliittyma.Kayttoliittyma;
+import tcs.Kayttoliittyma.Kayttoliittyma;
 import java.util.Random;
 import java.util.Scanner;
 import javax.swing.SwingUtilities;

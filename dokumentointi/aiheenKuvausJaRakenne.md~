@@ -5,6 +5,8 @@ Pelaajan tehtävänä on sulautua muiden käyttäjien joukkoon kirjoittamalla yl
 
 Mikäli pelin toteutus ilmenee helpoksi, voi siihen aina lisätä ominaisuuksia (vaikkapa moderaattorin, jonka saapuessa tulee spammaus lopettaa). Tällähetkellä minulla ei kyllä ole harmainta aavistusta miten aion toteuttaa pelin.
 
+Huom. jos idea vaikuttaa liian kieli-poskella tuotetulta, voin yrittää kehittää jotain muutakin
+
 #Käyttäjät: Pelaaja
 
 #Toiminnot:

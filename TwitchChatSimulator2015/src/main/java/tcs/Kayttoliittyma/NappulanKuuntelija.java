@@ -4,17 +4,19 @@
  * and open the template in the editor.
  */
 
-package Kayttoliittyma;
+package tcs.Kayttoliittyma;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import Pelilogiikka.Peli;
+import tcs.Pelilogiikka.Peli;
 
 /**
  *
  * @author jukkapai
+ * 
+ *  Kuuntelija, joka lähettää käyttäjän viestin GUI:ssa olevaa chat-nappulaa painettaessa.
  */
 public class NappulanKuuntelija implements ActionListener{
     private Peli peli;

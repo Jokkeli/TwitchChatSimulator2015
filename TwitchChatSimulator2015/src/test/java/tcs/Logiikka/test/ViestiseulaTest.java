@@ -1,4 +1,4 @@
-package tcs.logiikkatestit;
+package tcs.Logiikka.test;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -8,8 +8,9 @@ package tcs.logiikkatestit;
 
 
 
-import Pelilogiikka.Viestiseula;
+import tcs.Pelilogiikka.Viestiseula;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.junit.After;
 import org.junit.AfterClass;
 import static org.junit.Assert.*;
@@ -21,10 +22,10 @@ import org.junit.Test;
  *
  * @author jukkapai
  */
-public class SeulaTesti {
+public class ViestiseulaTest {
     Viestiseula seula;
     
-    public SeulaTesti() {
+    public ViestiseulaTest() {
     }
     
     @BeforeClass
@@ -80,6 +81,15 @@ public class SeulaTesti {
         seula2.uusiSpammattava();
         
         assertEquals("doge", seula2.getSpammattava());
+    }
+    
+    @Test
+    public void spammattavatLuodaan() {
+        seula.luoSpammattavat();
+        String[] oletusSpammattavat = {"Kappa", "BibleThump", "FailFish", "Kreygasm", "PogChamp", "dududu", "ヽ༼ຈل͜ຈ༽ﾉ RIOT ヽ༼ຈل͜ຈ༽ﾉ",
+                                       "Kippa"};
+        ArrayList<String> os = new ArrayList<String>(Arrays.asList(oletusSpammattavat));
+        assertEquals(os, seula.getSpammattavat());
     }
     
 

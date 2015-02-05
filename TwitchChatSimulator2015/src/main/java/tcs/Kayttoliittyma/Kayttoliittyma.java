@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-package Kayttoliittyma;
+package tcs.Kayttoliittyma;
 
-import Bottilogiikka.Bottilogiikka;
-import Pelilogiikka.Peli;
+import tcs.Bottilogiikka.Bottilogiikka;
+import tcs.Pelilogiikka.Peli;
 import java.awt.*;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -20,6 +20,8 @@ import javax.swing.WindowConstants;
 /**
  *
  * @author jukkapai
+ * 
+ * Käyttöliittymä, jossa luodaan pelin GUIssa näkyvät elementit jne.
  */
 public class Kayttoliittyma implements Runnable{
     

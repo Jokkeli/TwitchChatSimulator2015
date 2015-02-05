@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 
-package Bottilogiikka;
+package tcs.Bottilogiikka;
 
 import java.util.Random;
 
 /**
  *
  * @author jukkapai
+ * 
+ * Nimimerkkitietokanta, josta botit randomisoivat joka viestille nimimerkin.
  */
 public class Nimimerkit {
     private String[] nimimerkit;
@@ -25,6 +27,10 @@ public class Nimimerkit {
         this.random = new Random();
     }
     
+    /**
+     * arpoo satunnaisen nimimerkin
+     * @return satunnainen nimimerkki
+     */
     public String arvoNimimerkki() {
         return nimimerkit[random.nextInt(nimimerkit.length - 1)];
     }

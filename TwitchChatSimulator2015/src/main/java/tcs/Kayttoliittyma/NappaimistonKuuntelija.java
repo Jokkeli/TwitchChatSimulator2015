@@ -4,17 +4,19 @@
  * and open the template in the editor.
  */
 
-package Kayttoliittyma;
+package tcs.Kayttoliittyma;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import Pelilogiikka.Peli;
+import tcs.Pelilogiikka.Peli;
 
 /**
  *
  * @author jukkapai
+ * 
+ * Kuuntelija, joka lähettää käyttäjän viestin Enter-näppäintä painettaessa
  */
 public class NappaimistonKuuntelija implements KeyListener{
     private Peli peli;

@@ -1,4 +1,4 @@
-package tcs.logiikkatestit;
+package tcs.Logiikka.test;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -6,7 +6,7 @@ package tcs.logiikkatestit;
  * and open the template in the editor.
  */
 
-import Pelilogiikka.Pelaaja;
+import tcs.Pelilogiikka.Pelaaja;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -63,6 +63,34 @@ public class PelaajaTest {
     public void pisteidenLisaysNegatiivinen() {
         pelaaja.lisaaPisteita(-1);
         assertEquals(0, pelaaja.getPisteet());
+    }
+    
+    @Test
+    public void virheidenLisaysToimii() {
+        pelaaja.lisaaVirhe();
+        assertEquals(1, pelaaja.getVirheet());
+    }
+    
+    @Test
+    public void kolmeVirhettaBannaa() {
+        pelaaja.lisaaVirhe();
+        pelaaja.lisaaVirhe();
+        pelaaja.lisaaVirhe();
+        
+        assertEquals(true, pelaaja.onkoBannattu());
+    }
+    
+    @Test
+    public void bannausToimii() {
+        pelaaja.bannaa();
+        assertEquals(true, pelaaja.onkoBannattu());
+    }
+    
+    @Test
+    public void unBannausToimii() {
+        pelaaja.bannaa();
+        pelaaja.unBannaa();
+        assertEquals(false, pelaaja.onkoBannattu());
     }
 
     // TODO add test methods here.

@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 
-package Bottilogiikka;
+package tcs.Bottilogiikka;
 
 import java.util.Random;
 
 /**
  *
  * @author jukkapai
+ * 
+ * Botti, jonka spammausta pelaajan tulee mukailla; spammaa pelin antamaa merkkijonoa.
  */
 public class MalliBot implements SpammerBot{
     private Nimimerkit nimimerkit;
@@ -21,6 +23,11 @@ public class MalliBot implements SpammerBot{
         this.random = new Random();
     }
 
+    /**
+     * Generoi viestin joka koostuu satunnaisesta nimimerkistä sekä spammattavasta merkkijonosta
+     * @param spammattava pelin antama merkkijono
+     * @return palauttaa generoidun viestin
+     */
     @Override
     public String spammaa(String spammattava) {
         return nimimerkit.arvoNimimerkki() + ": " + spammattava;
