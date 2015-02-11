@@ -8,10 +8,14 @@ package tcs.Bottilogiikka;
 import tcs.Pelilogiikka.Peli;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JTextArea;
 import javax.swing.Timer;
+import javax.swing.text.BadLocationException;
 
 /**
  *
@@ -41,9 +45,11 @@ public class Bottilogiikka extends Timer implements ActionListener {
     /**
      * luo SpammerBotit
      */
-    public void luoBotit() {
+    public void luoBotit() throws FileNotFoundException {
         Nimimerkit nimet = new Nimimerkit();
+        Pasterinot pasterinot = new Pasterinot();
         botit.add(new MalliBot(nimet));
+        botit.add(new RandomBot(pasterinot, nimet));
     }
 
     public ArrayList<SpammerBot> getBotit() {
@@ -57,8 +63,12 @@ public class Bottilogiikka extends Timer implements ActionListener {
      * @param botti SpammaaKaikki -metodin parametrina antama botti
      *
      */
-    public void SpammaaYksi(SpammerBot botti) {
+    public void SpammaaYksi(SpammerBot botti) throws BadLocationException {
         viestikentta.append(botti.spammaa(peli.spammattava()) + "\n");
+        if(viestikentta.getLineCount() >= 100) {
+            int end = viestikentta.getLineEndOffset(0);
+            viestikentta.replaceRange(null, 0, end);
+        }
     }
 
     /**
@@ -66,7 +76,7 @@ public class Bottilogiikka extends Timer implements ActionListener {
      * 
      *
      */
-    public void SpammaaKaikki() {
+    public void SpammaaKaikki() throws BadLocationException {
         for (SpammerBot botti : botit) {
             if (random.nextInt(10) == 1) {
                 SpammaaYksi(botti);
@@ -91,6 +101,10 @@ public class Bottilogiikka extends Timer implements ActionListener {
             viestikentta.append("You have been permanently banned from GenericStreamName \n");
             this.stop();
         }
-        SpammaaKaikki();
+        try {
+            SpammaaKaikki();
+        } catch (BadLocationException ex) {
+            Logger.getLogger(Bottilogiikka.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

@@ -9,6 +9,9 @@ package tcs.Kayttoliittyma;
 import tcs.Bottilogiikka.Bottilogiikka;
 import tcs.Pelilogiikka.Peli;
 import java.awt.*;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -47,7 +50,11 @@ public class Kayttoliittyma implements Runnable{
         frame.pack();
         frame.setVisible(true);
         
-        bottilogiikka.luoBotit();
+        try {
+            bottilogiikka.luoBotit();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Kayttoliittyma.class.getName()).log(Level.SEVERE, null, ex);
+        }
         bottilogiikka.kaynnista();
 
     }
