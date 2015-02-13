@@ -9,3 +9,5 @@
 29.1 2h Käyttöliittymän ohjelmointia
 
 4.2 6h timerin ja spammerbotin ohjelmointia
+
+5.2 3h testausta uudelle logiikalle ja dokumentointia.

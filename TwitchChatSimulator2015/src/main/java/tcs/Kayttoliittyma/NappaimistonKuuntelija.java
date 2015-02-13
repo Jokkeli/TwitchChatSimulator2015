@@ -35,6 +35,10 @@ public class NappaimistonKuuntelija implements KeyListener{
     public void keyTyped(KeyEvent ke) {
     }
 
+    /*
+    * Käyttää pelin logiikkaa käyttäjän viestin tarkastamiseen, jonka jälkeen
+    * lisää tarkastetun viestin käyttöliittymään sekä päivittää pelaajan pisteet
+    */
     @Override
     public void keyPressed(KeyEvent ke) {
         if(ke.getKeyCode() == KeyEvent.VK_ENTER) {
