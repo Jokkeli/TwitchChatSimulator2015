@@ -31,9 +31,10 @@ public class Kayttoliittyma implements Runnable{
     private JFrame frame;
     private Peli peli;
     private Bottilogiikka bottilogiikka;
+    private String nimimerkki;
     
-    public Kayttoliittyma() {
-        
+    public Kayttoliittyma(String a) {
+        this.nimimerkki = a;
     }
 
     @Override
@@ -45,8 +46,11 @@ public class Kayttoliittyma implements Runnable{
         frame.setLayout(new BorderLayout());
         
         peli = new Peli();
+        if(!nimimerkki.isEmpty()) {
+            peli.vaihdaPelaajanNimi(nimimerkki);
+        }
         
-        luoKomponentit(frame.getContentPane());
+        luoKomponentit(frame.getContentPane(), frame);
         frame.pack();
         frame.setVisible(true);
         
@@ -59,16 +63,16 @@ public class Kayttoliittyma implements Runnable{
 
     }
     
-    private void luoKomponentit(Container container){
+    private void luoKomponentit(Container container, JFrame frame){
         JTextArea viestiruutu = luoViestiRuutu(container);
         
         JTextField pistekentta = luoPistePaneeli(container);
         
                 
-        LuoLahetysPaneeli(viestiruutu, pistekentta, container);
+        LuoLahetysPaneeli(viestiruutu, pistekentta, container, frame);
     }
 
-    private void LuoLahetysPaneeli(JTextArea viestiruutu, JTextField pistekentta, Container container) throws HeadlessException {
+    private void LuoLahetysPaneeli(JTextArea viestiruutu, JTextField pistekentta, Container container, JFrame frame) throws HeadlessException {
         JPanel alapaneeli = new JPanel(new FlowLayout());
         
         JTextField lahetysruutu = new JTextField(20);
@@ -77,11 +81,11 @@ public class Kayttoliittyma implements Runnable{
         lahetysruutu.setFont(new Font("Helvetica", Font.PLAIN, 16));
         
         Button laheta = new Button("Chat");
-        laheta.addActionListener(new NappulanKuuntelija(peli, lahetysruutu, viestiruutu, pistekentta));
+        laheta.addActionListener(new NappulanKuuntelija(peli, lahetysruutu, viestiruutu, pistekentta, frame));
         
         alapaneeli.add(lahetysruutu);
         alapaneeli.add(laheta);
-        lahetysruutu.addKeyListener(new NappaimistonKuuntelija(peli, lahetysruutu, viestiruutu, pistekentta));
+        lahetysruutu.addKeyListener(new NappaimistonKuuntelija(peli, lahetysruutu, viestiruutu, pistekentta, frame));
         
         this.bottilogiikka = new Bottilogiikka(viestiruutu, peli);
         container.add(alapaneeli, BorderLayout.PAGE_END);

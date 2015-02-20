@@ -6,11 +6,13 @@
 
 package tcs.Bottilogiikka.test;
 
+import java.io.FileNotFoundException;
 import tcs.Bottilogiikka.Bottilogiikka;
 import tcs.Bottilogiikka.SpammerBot;
 import tcs.Pelilogiikka.Peli;
 import java.util.ArrayList;
 import javax.swing.JTextArea;
+import javax.swing.text.BadLocationException;
 import org.junit.After;
 import org.junit.AfterClass;
 import static org.junit.Assert.*;
@@ -47,14 +49,14 @@ public class BottilogiikkaTest {
     }
     
     @Test
-    public void toimiikoBottienLuonti() {
+    public void toimiikoBottienLuonti() throws FileNotFoundException {
         botL.luoBotit();
         ArrayList<SpammerBot> botit = botL.getBotit();
         assertEquals(false, botit.isEmpty());
     }
     
     @Test
-    public void toimiikoSpammaus() {
+    public void toimiikoSpammaus() throws FileNotFoundException, BadLocationException {
         botL.luoBotit();
         for(SpammerBot botti : botL.getBotit()) {
                 botL.SpammaaYksi(botti);

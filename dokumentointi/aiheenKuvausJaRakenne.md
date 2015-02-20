@@ -3,12 +3,6 @@ Peli, joka simuloi twitch.tv streamien (erityisesti Dota2/HearthStone/tjsp) chat
 
 Pelaajan tehtävänä on sulautua muiden käyttäjien joukkoon kirjoittamalla yleistilanteeseen vastaavia viestejä, joista saa pisteitä. Kuitenkin jos esimerkiksi muut käyttäjät spammaavat "Kappa", ja pelaaja kirjoittaakin vaikka "hello:)", saa pelaaja rikkeen. Kolmesta rikkeestä peli päättyy, eli pelaaja "saa bannit chatista".
 
-
-#Käyttäjät: Pelaaja
-
-#Toiminnot:
--Nimimerkin valinta (ei vielä toteutettu)
--Pelin aloitus (alkaa HETI)
--Viestin syöttö (jopa toimii jo)
--(highscores)? (long shot)
+#Ohje:
+Valitse nimimerkki, jonka jälkeen spammaa massan mukana. Jos häviät tai muuten vaan tuntuu siltä, voit kirjoittaa "reboot" aloittaaksesi pelin uudestaan
 

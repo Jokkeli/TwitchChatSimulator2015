@@ -98,8 +98,9 @@ public class Bottilogiikka extends Timer implements ActionListener {
             peli.vaihdaSpammattavaa();
         }
         if (peli.onkoBannattu()) {
-            viestikentta.append("You have been permanently banned from GenericStreamName \n");
             this.stop();
+            viestikentta.append("You have been permanently banned from GenericStreamName \n");
+            viestikentta.append("Your score was " + peli.getPelaajanPisteet());
         }
         try {
             SpammaaKaikki();

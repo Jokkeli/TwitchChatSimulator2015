@@ -16,4 +16,6 @@
 
 14.2 tunti dokumentointia, sekvenssikaavioita ja pari testiä
 
+19.2 - 20.2 yö: x määrä ohjelmointia, en ole oikein varma
+
 

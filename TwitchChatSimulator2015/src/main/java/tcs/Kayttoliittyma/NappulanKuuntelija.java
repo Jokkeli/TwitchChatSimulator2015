@@ -7,8 +7,10 @@ package tcs.Kayttoliittyma;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 import tcs.Pelilogiikka.Peli;
 
 /**
@@ -24,11 +26,13 @@ public class NappulanKuuntelija implements ActionListener {
     private JTextField viesti;
     private JTextArea tekstikentta;
     private JTextArea pistekentta;
+    private JFrame frame;
 
-    public NappulanKuuntelija(Peli peli, JTextField viesti, JTextArea tekstikentta, JTextField pistekentta) {
+    public NappulanKuuntelija(Peli peli, JTextField viesti, JTextArea tekstikentta, JTextField pistekentta, JFrame frame) {
         this.peli = peli;
         this.viesti = viesti;
         this.tekstikentta = tekstikentta;
+        this.frame = frame;
     }
 
     /*
@@ -37,6 +41,12 @@ public class NappulanKuuntelija implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent ae) {
+        if(viesti.getText().equals("reboot")) {
+                Aloitusruutu ruutu = new Aloitusruutu();
+                SwingUtilities.invokeLater(ruutu);
+                frame.setVisible(false);
+               
+            }
         this.tekstikentta.append(peli.viesti(viesti.getText()) + "\n");
         viesti.setText("");
         pistekentta.setText("" + peli.getPelaajanPisteet());

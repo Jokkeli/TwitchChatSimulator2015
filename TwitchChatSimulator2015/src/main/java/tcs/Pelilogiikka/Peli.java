@@ -49,6 +49,10 @@ public class Peli {
 
         return tulostettava;
     }
+    
+    public void vaihdaPelaajanNimi(String nimi) {
+        pelaaja.vaihdaNimimerkkia(nimi);
+    }
 
     /**
      * vaihtaa spammattavaa merkkijonoa

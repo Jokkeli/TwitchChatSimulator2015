@@ -11,3 +11,9 @@
 4.2 6h timerin ja spammerbotin ohjelmointia
 
 5.2 3h testausta uudelle logiikalle ja dokumentointia.
+
+12.2 pari tuntia ohjelmointia, randomibotin logiikka ja viestiraja asetettu
+
+14.2 tunti dokumentointia, sekvenssikaavioita ja pari testiä
+
+
