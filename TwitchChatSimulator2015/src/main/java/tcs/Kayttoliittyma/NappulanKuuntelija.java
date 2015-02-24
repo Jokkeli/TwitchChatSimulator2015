@@ -25,7 +25,7 @@ public class NappulanKuuntelija implements ActionListener {
     private Peli peli;
     private JTextField viesti;
     private JTextArea tekstikentta;
-    private JTextArea pistekentta;
+    private JTextField pistekentta;
     private JFrame frame;
 
     public NappulanKuuntelija(Peli peli, JTextField viesti, JTextArea tekstikentta, JTextField pistekentta, JFrame frame) {
@@ -33,6 +33,7 @@ public class NappulanKuuntelija implements ActionListener {
         this.viesti = viesti;
         this.tekstikentta = tekstikentta;
         this.frame = frame;
+        this.pistekentta = pistekentta;
     }
 
     /*
