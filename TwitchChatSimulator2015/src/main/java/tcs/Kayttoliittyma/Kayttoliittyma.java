@@ -21,10 +21,10 @@ import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
 /**
- *
+ * Käyttöliittymä, jossa luodaan pelin GUIssa näkyvät elementit jne.
  * @author jukkapai
  * 
- * Käyttöliittymä, jossa luodaan pelin GUIssa näkyvät elementit jne.
+ * 
  */
 public class Kayttoliittyma implements Runnable{
     

@@ -15,10 +15,10 @@ import javax.swing.SwingUtilities;
 import tcs.Pelilogiikka.Peli;
 
 /**
- *
+ * Kuuntelija, joka lähettää käyttäjän viestin Enter-näppäintä painettaessa
  * @author jukkapai
  * 
- * Kuuntelija, joka lähettää käyttäjän viestin Enter-näppäintä painettaessa
+ * 
  */
 public class NappaimistonKuuntelija implements KeyListener{
     private Peli peli;
@@ -46,7 +46,7 @@ public class NappaimistonKuuntelija implements KeyListener{
     @Override
     public void keyPressed(KeyEvent ke) {
         if(ke.getKeyCode() == KeyEvent.VK_ENTER) {
-            if(viesti.getText().equals("reboot")) {
+            if(viesti.getText().equals("restart")) {
                 Aloitusruutu ruutu = new Aloitusruutu();
                 SwingUtilities.invokeLater(ruutu);
                 frame.setVisible(false);

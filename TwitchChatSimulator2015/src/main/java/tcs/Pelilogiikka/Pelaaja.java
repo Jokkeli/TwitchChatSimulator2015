@@ -6,10 +6,10 @@ package tcs.Pelilogiikka;
  * and open the template in the editor.
  */
 /**
- *
+ * Luokka, joka kapseloi pelaajaan liittyvät ominaisuudet.
  * @author jukkapai
  *
- * Luokka, joka kapseloi pelaajaan liittyvät ominaisuudet.
+ * 
  */
 public class Pelaaja {
 
@@ -66,6 +66,7 @@ public class Pelaaja {
     }
     /**
      * lisää pelaajalle annetun määrän pisteitä
+     * tätä ei oikeastaan ikinä käytetä, mutta tulevaisuudessa ehkä
      * @param saadutPisteet annettu määrä pisteitä
      */
     public void lisaaPisteita(int saadutPisteet) {

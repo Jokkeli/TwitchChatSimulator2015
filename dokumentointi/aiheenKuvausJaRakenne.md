@@ -6,3 +6,7 @@ Pelaajan tehtävänä on sulautua muiden käyttäjien joukkoon kirjoittamalla yl
 #Ohje:
 Valitse nimimerkki, jonka jälkeen spammaa massan mukana. Jos häviät tai muuten vaan tuntuu siltä, voit kirjoittaa "reboot" aloittaaksesi pelin uudestaan
 
+#Rakennekuvaus:
+Aloitusruutu -luokka luo varsinaisen käyttöliittymän (oikeastaan aloitusruudun actionlistenerit), joka puolestaan luo sekä pelilogiikan että bottilogiikan. Bottilogiikka tuntee pelin ja käyttöliittymässä sijaitsevan tekstikentän, jotka sille annetaan parametreina.
+Bottilogiikka tuntee interfacea SpammerBot toteuttavia olioita. Bottilogiikka luo Nimimerkkitietokannan ja Pasterinotietokannan, joita botit käyttävät. Pelilogiikka tuntee pelaajan ja viestiseulan.
+

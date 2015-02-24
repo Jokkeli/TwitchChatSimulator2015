@@ -14,11 +14,11 @@ import javax.swing.SwingUtilities;
 import tcs.Pelilogiikka.Peli;
 
 /**
- *
- * @author jukkapai
- *
  * Kuuntelija, joka lähettää käyttäjän viestin GUI:ssa olevaa chat-nappulaa
  * painettaessa.
+ * @author jukkapai
+ *
+ * 
  */
 public class NappulanKuuntelija implements ActionListener {
 
@@ -41,7 +41,7 @@ public class NappulanKuuntelija implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if(viesti.getText().equals("reboot")) {
+        if(viesti.getText().equals("restart")) {
                 Aloitusruutu ruutu = new Aloitusruutu();
                 SwingUtilities.invokeLater(ruutu);
                 frame.setVisible(false);

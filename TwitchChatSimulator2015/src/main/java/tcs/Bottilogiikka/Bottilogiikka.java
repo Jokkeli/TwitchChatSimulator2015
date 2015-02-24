@@ -18,12 +18,12 @@ import javax.swing.Timer;
 import javax.swing.text.BadLocationException;
 
 /**
- *
- * @author jukkapai
- *
  * Luokka toimii pelin ajastimena, kopioiden bottien spammauksia
  * käyttöliittymään sekä vaihtaen spammattavaaa merkkijonoa satunnaisin
  * väliajoin.
+ * @author jukkapai
+ *
+ *
  *
  */
 public class Bottilogiikka extends Timer implements ActionListener {
@@ -32,7 +32,13 @@ public class Bottilogiikka extends Timer implements ActionListener {
     private Peli peli;
     private ArrayList<SpammerBot> botit;
     private Random random;
-
+    /**
+     * Konstruktori, joka saa parametreinään käyttöliittymän luoman viestikentän,
+     * johon viestit siirretään, sekä pelin, jonka metodeja käytetään mm viestien
+     * tarkistamiseen
+     * @param viestikentta
+     * @param peli 
+     */
     public Bottilogiikka(JTextArea viestikentta, Peli peli) {
         super(50, null);
         this.addActionListener(this);
@@ -100,7 +106,7 @@ public class Bottilogiikka extends Timer implements ActionListener {
         if (peli.onkoBannattu()) {
             this.stop();
             viestikentta.append("You have been permanently banned from GenericStreamName \n");
-            viestikentta.append("Your score was " + peli.getPelaajanPisteet());
+            viestikentta.append("Your score was " + peli.getPelaajanPisteet() + "\n");
         }
         try {
             SpammaaKaikki();

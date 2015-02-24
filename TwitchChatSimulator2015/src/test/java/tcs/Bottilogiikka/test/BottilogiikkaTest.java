@@ -21,7 +21,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
- *
+ * Huom: en tiedä miten aikaan tai satunnaisuuteen liittyvät asiat testataan,
+ * josta johtuu huonohko rivikattavuus.
  * @author jukkapai
  */
 public class BottilogiikkaTest {

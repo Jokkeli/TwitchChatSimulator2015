@@ -3,15 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package tcs.Bottilogiikka;
 
 /**
+ * Rajapinta, jota kaikki erilaiset spammibotit noudattavat. lähinnä
+ * selkeyttämään hommaa, ei toiminnallisesti tärkeä.
  *
  * @author jukkapai
- * 
- * Rajapinta, jota kaikki erilaiset spammibotit noudattavat.
+ *
+ *
+ *
  */
 public interface SpammerBot {
+
     String spammaa(String spammattava);
 }

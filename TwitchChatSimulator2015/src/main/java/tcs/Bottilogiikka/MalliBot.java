@@ -9,10 +9,10 @@ package tcs.Bottilogiikka;
 import java.util.Random;
 
 /**
- *
+ *Botti, jonka spammausta pelaajan tulee mukailla; spammaa pelin antamaa merkkijonoa.
  * @author jukkapai
  * 
- * Botti, jonka spammausta pelaajan tulee mukailla; spammaa pelin antamaa merkkijonoa.
+ * 
  */
 public class MalliBot implements SpammerBot{
     private Nimimerkit nimimerkit;

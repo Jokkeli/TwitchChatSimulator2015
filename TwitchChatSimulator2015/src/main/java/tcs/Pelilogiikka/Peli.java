@@ -8,10 +8,10 @@ import java.util.ArrayList;
  * and open the template in the editor.
  */
 /**
- *
+ * Luokka, joka ylläpitää pelin sääntöjä ja keskustelee bottilogiikan kanssa.
  * @author jukkapai
  *
- * Luokka, joka ylläpitää pelin sääntöjä ja keskustelee bottilogiikan kanssa.
+ * 
  */
 public class Peli {
 
@@ -88,5 +88,9 @@ public class Peli {
 
     public String spammattava() {
         return seula.getSpammattava();
+    }
+    
+    public String getPelaajanNimi() {
+        return pelaaja.getNimimerkki();
     }
 }

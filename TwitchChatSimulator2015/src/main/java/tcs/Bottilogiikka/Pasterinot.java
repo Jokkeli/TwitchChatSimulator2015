@@ -8,28 +8,33 @@ package tcs.Bottilogiikka;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 /**
- *
+ * Copypastoja sisältävää tekstitiedostoa lukeva luokka, josta RandomBotit
+ * saavat spammattavan merkkijononsa.
  * @author jukkapai
  */
 public class Pasterinot {
     private Scanner lukija;
     private ArrayList<String> pastaLista;
-    private File pasterinot;
+    private InputStream pasterinot;
     private Random random;
     
     public Pasterinot() throws FileNotFoundException {
-        pasterinot = new File("pasterino.txt");
+        pasterinot = this.getClass().getResourceAsStream("/pasterino.txt");
         lukija = new Scanner(pasterinot);
         random = new Random();
         pastaLista = luoPastaLista();
         
     }
-    
+    /**
+     * muuttaa tekstitiedoston ArrayList -muotoon arvonnan helpottamiseksi
+     * @return palauttaa arraylistin pastoja
+     */
     public ArrayList<String> luoPastaLista() {
         ArrayList<String> pastat = new ArrayList<String>();
         while(lukija.hasNextLine()) {
@@ -38,7 +43,10 @@ public class Pasterinot {
         return pastat;
     }
     
-    
+    /**
+     * arpoo edellisessä metodissa luodusta listasta satunnaisen pasterinon
+     * @return 
+     */
     public String arvoPasterino() {
         return(pastaLista.get(random.nextInt(pastaLista.size()-1)));
     }

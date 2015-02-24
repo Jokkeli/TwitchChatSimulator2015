@@ -18,4 +18,8 @@
 
 19.2 - 20.2 yö: x määrä ohjelmointia, en ole oikein varma
 
+23.2: 2h viimeisiä testejä ja dokumentointia
+
+24.2: jar kuntoon ja aloitusruudun tekstin korjaus
+
 

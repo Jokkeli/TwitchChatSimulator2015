@@ -12,11 +12,11 @@ import java.util.Random;
  */
 
 /**
- *
- * @author jukkapai
- * 
  * Luokka, joka sisältää erilaiset spammausvaihtoehdot ja tarkistaa, onko pelaajan
  * lähettämä viesti validia spammausta.
+ * @author jukkapai
+ * 
+ * 
  */
 public class Viestiseula {
     private ArrayList<String> spammattavat;
@@ -31,10 +31,12 @@ public class Viestiseula {
     
     public void luoSpammattavat() {
         String[] oletusSpammattavat = {"Kappa", "BibleThump", "FailFish", "Kreygasm", "PogChamp", "dududu", "ヽ༼ຈل͜ຈ༽ﾉ RIOT ヽ༼ຈل͜ຈ༽ﾉ",
-                                       "Kippa"};
+                                       "Kippa", "PJSalt", "doge4president", "BabyRage"};
         spammattavat = new ArrayList<String>(Arrays.asList(oletusSpammattavat));
     }
-    
+    /**
+     * arpoo uuden spammattavan listalta
+     */
     public void uusiSpammattava() {
         int a = random.nextInt(spammattavat.size());
         spammattava = spammattavat.get(a);
