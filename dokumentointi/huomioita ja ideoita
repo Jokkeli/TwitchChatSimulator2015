@@ -1,0 +1,9 @@
+#Huom
+Jotkut erikoismerkit eivät näytä toimivan kaikilla koneilla, huolimatta text encodingin asettamista utf-8:iin. Ei ideaa miten korjata
+
+#Kehitysideoita tulevaisuudessa ehkä mahdollisesti
+-Nimimerkkeihin värit ja bold
+-Hymiöt näkyviin
+-Autenttisempi ja tasaisemmin satunnainen chatti
+-Eri streamereille kustomoitu simulaattori satiirin tarkkuuden säilyttämiseksi
+-Kun chatissa spammataan "dududu" alkaa soida Darude - Sandstorm
