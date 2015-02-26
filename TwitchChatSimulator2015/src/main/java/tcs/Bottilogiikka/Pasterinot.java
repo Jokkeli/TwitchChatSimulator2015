@@ -26,7 +26,8 @@ public class Pasterinot {
     
     public Pasterinot() throws FileNotFoundException {
         pasterinot = this.getClass().getResourceAsStream("/pasterino.txt");
-        lukija = new Scanner(pasterinot);
+        
+        lukija = new Scanner(pasterinot, "utf-8");
         random = new Random();
         pastaLista = luoPastaLista();
         
